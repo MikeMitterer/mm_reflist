@@ -1,0 +1,29 @@
+<!--###TEMPLATE_DEFAULT### begin
+	Help template for the default language, english
+-->
+<table border="0" cellspacing="0" cellpadding="0">
+  <!--###LIST_HEADER### begin -->
+  <tr ###HEADERCLASS###> 
+    <td ###HEADER_PREVIEW_CLASS###>###HEADER_PREVIEW###&nbsp;</td>
+    <td ###HEADER_NAME_CLASS###>###HEADER_NAME###&nbsp;</td>
+    <td ###HEADER_SHORTTEXT_CLASS###>###HEADER_SHORTTEXT###&nbsp;</td>
+  </tr>
+  <!--###LIST_HEADER### end -->
+	<!--###LIST_ROW### begin -->
+	<tr###ROWCLASS###> 
+		<!--###LIST_COL### begin -->
+			<td ###PREVIEW_CLASS###>###PREVIEW###</td>
+			<td ###NAME_CLASS###>###NAME###</td>
+			<td ###SHORTTEXT_CLASS###>###SHORTTEXT###(###KATHARINA###)</td>
+			###EDITPANEL### 
+		<!--###LIST_COL### end -->
+	</tr>
+	<!--###LIST_ROW### end -->
+</table>
+<!--###DEBUGINFO### begin -->
+<hr>
+All available field names: (Remove that section in a production release)<br>
+###ALLFIELDNAMES###
+<hr>
+<!--###DEBUGINFO### end -->
+<!--###TEMPLATE_DEFAULT### end -->

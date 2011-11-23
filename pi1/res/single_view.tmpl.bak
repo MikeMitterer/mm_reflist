@@ -1,0 +1,37 @@
+<!--###TEMPLATE_DEFAULT### begin
+	Help template for the default language, english
+-->
+<H2>###FIELD_NAME###</H2>
+<table width="100%" border="0">
+  <tr>
+    <td align="left" valign="top">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" ###TABLECLASS###>
+        <!--###SINGLEVIEW### begin -->
+        <tr ###ROWCLASS1###>
+          <td ###LABEL_NAME_CLASS###>Name:</td>
+          <td ###FIELD_NAME_CLASS###>###FIELD_NAME###</td>
+          <td rowspan="2" ###FIELD_IMAGE_CLASS###>###FIELD_IMAGE###</td>
+        </tr>
+        <tr ###ROWCLASS2###>
+          <td colspan="2" ###FIELD_DESCRIPTION_CLASS###>###FIELD_DESCRIPTION###</td>
+        </tr>
+        <tr ###ROWCLASS3###>
+          <td ###LABEL_GROUPNAME_CLASS###>Groupname:</td>
+          <td colspan="2" ###FIELD_GROUPNAME_CLASS###>###FIELD_GROUPNAME###</td>
+        </tr>
+        <tr ###ROWCLASS4###>
+          <td colspan="3"><div ###FIELD_PHONE_CLASS###>###FIELD_PHONE###</div>
+		  <div ###FIELD_EMAIL_CLASS###>###FIELD_EMAIL###</div></td>
+        </tr>
+        <!--###SINGLEVIEW### end -->
+      </table>
+    </td>
+  </tr>
+</table>
+Last update: ###SYS_LASTUPDATE###<br><br>
+###SYS_BACKLINK### ###SYS_EDITPANEL###<br>
+<hr>
+All available field names: (Remove that section in a production release)<br>
+###SYS_ALLFIELDS###
+<hr>
+<!--###TEMPLATE_DEFAULT### end -->

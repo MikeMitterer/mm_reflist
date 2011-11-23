@@ -1,0 +1,147 @@
+plugin.tx_mmreflist_pi1 {
+	CMD =
+	pidList =
+	recursive =
+	}
+	
+plugin.tx_mmreflist_pi1.listView {
+	results_at_a_time = 7
+	maxPages =
+	colsOnPage = 1
+	showSearchBox = 0
+	showModeSelector = 0
+	showBrowserResults = 1
+	showHeader = 1
+	
+	templateFile = list_view.tmpl
+	//templateFile = list_view_fieldbynumber.tmpl
+	//templateFile = fileadmin/template/list_view.tmpl
+	}
+
+plugin.tx_mmreflist_pi1.singleView {
+	//templateFile = single_view_autocontent.tmpl
+	templateFile = single_view.tmpl
+	
+	dateformat = Y/m/d
+	
+	// With displayOrder you can define the order of the fields in the single View
+	// if not defined then the table-structure is the base for order of the fields
+	// If you use a marker - The text right of the keyword marker ist used as a lable
+	// If you have an entry in you locallang.php with marker_<Marker Text> this entry overwrites
+	// the text from the brackets
+	displayOrder = [marker Description], name, groupname, shorttext, description, [marker Contact], phone, fax, email, image, web
+	}
+	
+//------------------------------------------------------------------------------
+// The supportet fieldnames for typodbfield
+// are: image, link, filelink, stdwrap,singlelink
+//	
+plugin.tx_mmreflist_pi1.typodbfield {
+	dummyfieldlist = preview
+		
+	shorttext {
+		//labelStdWrap can be used
+		singlelink = 1
+		fieldtype = rtecsstext
+		}
+		
+	image {
+		fieldtype = image
+		// use the image with this index
+		//listNum = 1
+		file.maxW = 190
+		wrap = | <br>
+	  imageLinkWrap = 1
+	  imageLinkWrap {
+			bodyTag = <BODY bgColor=black>
+			wrap = <A href="javascript:close();"> | </A>
+			width = 500m
+			height = 400m
+			JSwindow = 1
+			JSwindow.newWindow = 1
+			JSwindow.expand = 17,20
+			enable = 1
+    	}
+		}
+
+	// You can change the content of dummyfield with an entry for 'field'
+	// The Tablename for field must exist as a Table-Fieldname
+	//preview < .image
+	//preview {
+	//	file.maxW = 80
+	//	field = image
+	//	}
+	
+	preview {
+		singlelink = 1
+		
+		//You can use labelStdWraw
+		//labelStdWrap.cObject = TEXT
+		//labelStdWrap.cObject.value = More...
+		
+		//or
+		
+		field = image // test
+		labelImage = IMAGE
+		labelImage {
+				file = buzzle.jpg
+				file {
+					maxW = 80
+					import = uploads/tx_mmreflist/
+					import.field = image
+					import.listNum = 0
+					}			
+			}
+		}
+			
+	email {
+		fieldtype = link
+		}
+	web < .email
+	web {
+		makelinks.http.wrap = [< | >]
+		wrap = [ | ]
+		
+		// if typolink ist set to 1 the function typolink ist used to parse the settings
+		// otherwise parseFunc ist used.
+		typolink = 1;
+
+		// if typolink is used then labelStdWrap can be used too
+		labelStdWrap.cObject = TEXT
+		labelStdWrap.cObject.value = Website...
+		}
+	
+	# Example for a filelink
+	pdffile {	
+		fieldtype = filelink
+		path = uploads/$pluginname/ 
+		path2 = uploads/media/
+		icon = 1
+		size = 1
+		size.wrap = ( | )
+		jumpurl = 1
+		jumpurl.secure = 1
+		target = _blank
+		
+		# Add Labletext instead of Filename
+		# labelStdWrap.cObject = TEXT
+		# labelStdWrap.cObject.value = Mike
+		}
+		
+	description {
+		fieldtype = rtecsstext
+		}
+	}
+	
+
+  # Example of default set CSS styles (these go into the document header):
+plugin.tx_mmreflist_pi1._CSS_DEFAULT_STYLE (
+  .tx-mmreflist-pi1 H2 { margin-top: 0px; margin-bottom: 0px; }
+	)
+	
+  # Example of how to overrule LOCAL_LANG values for the plugin:
+plugin.tx_mmreflist_pi1._LOCAL_LANG.default {
+  pi_list_searchBox_search = Search!
+}
+  # Example of how to set default values from TS in the incoming array, $this->piVars of the plugin:
+plugin.tx_mmreflist_pi1._DEFAULT_PI_VARS.test = test

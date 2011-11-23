@@ -1,0 +1,88 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Formatierung f. Referenzliste
+Link: http://typo3.org/documentation/document-library/gst_selectpro/Introduction-8176989a4f/
+
+Ben�tigte Plugins:
+
+Typo-Settings:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*-------------------------------------------------------------------------
+* listView
+*/
+.tx-mmreflist-pi1 {
+	width: 95%;
+	margin-left: 10px;
+	}
+	
+.tx-mmreflist-pi1-listheader {
+	font-weight: bold;
+	background-color: #F2F1EE;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	border: 1px solid #E8E8E8;
+	}
+
+.tx-mmreflist-pi1-listrow {
+	}
+	
+.tx-mmreflist-pi1-listrow .tx-mmreflist-pi1-preview {
+	text-align: center;
+	}
+		
+.tx-mmreflist-pi1-listrow .tx-mmreflist-pi1-header_name,
+.tx-mmreflist-pi1-listrow .tx-mmreflist-pi1-preview,	
+.tx-mmreflist-pi1-listrow .tx-mmreflist-pi1-image {
+	width: 200px;
+	}	
+
+.tx-mmreflist-pi1-listrow .mm-reflist-right-block {
+	margin-left: 200px;
+	}
+	
+.tx-mmreflist-pi1-listrow table {
+	width: 100%;
+	border-left: 1px solid #E8E8E8;
+	border-right: 1px solid #E8E8E8;
+	border-bottom: 1px solid #E8E8E8;
+	}
+
+.tx-mmreflist-pi1-listrow table td {
+	padding-top: 0.5em;
+	padding-bottom: 0.25em;
+	}
+	
+.tx-mmreflist-pi1-listrow .tx-mmreflist-pi1-header_name,
+.tx-mmreflist-pi1-listrow .tx-mmreflist-pi1-preview {
+	float: left;
+	}
+
+
+.tx-mmreflist-pi1 .browseBoxWrap {
+	padding-top: 1em;
+	clear: both;
+	}
+/*-------------------------------------------------------------------------
+* singleView
+*/
+
+.tx-mmreflist-pi1 .tx-mmreflist-pi1-singleView .tx-mmreflist-pi1-field_image {
+	text-align: center;
+	padding: 1em;
+	} 
+	
+.tx-mmreflist-pi1 .tx-mmreflist-pi1-singleView .tx-mmreflist-pi1-label_groupname,
+.tx-mmreflist-pi1 .tx-mmreflist-pi1-singleView .tx-mmreflist-pi1-field_groupname {
+	background-color: #EEEEEE;
+	padding: 0.25em;
+	margin-top: 1em;
+	}	
+
+.tx-mmreflist-pi1 .tx-mmreflist-pi1-singleView .tx-mmreflist-pi1-field_email a{
+	float: left;
+	padding-right: 1em;
+	}	
+
+
+/*~ Plugin - REFList ENDE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/	
+

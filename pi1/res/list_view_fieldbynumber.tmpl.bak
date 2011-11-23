@@ -1,0 +1,31 @@
+<!--###TEMPLATE_DEFAULT### begin
+	Help template for the default language, english
+-->
+<table border="0" cellspacing="0" cellpadding="0">
+  <!--###LIST_HEADER### begin -->
+  <tr ###HEADERCLASS###> 
+    <td>###HEADER15###&nbsp;</td>
+    <td>###HEADER16###&nbsp;</td>
+    <td>###HEADER17###&nbsp;</td>
+    <td>###HEADER20###&nbsp;</td>
+  </tr>
+  <!--###LIST_HEADER### end -->
+	<!--###LIST_ROW### begin -->
+	<tr###ROWCLASS###> 
+		<!--###LIST_COL### begin -->
+			<td ###FIELD15_CLASS###>###FIELD15### <br>#15 [###FIELD15_NAME###]<p/></td>
+			<td ###FIELD16_CLASS###>###FIELD16### <br>#16 [###FIELD16_NAME###]<p/></td>
+			<td ###FIELD17_CLASS###>###FIELD17### <br>#17 [###FIELD17_NAME###]<p/></td>
+			<td ###FIELD20_CLASS###>###FIELD20### <br>#20 [###FIELD20_NAME###]<p/></td>
+			###EDITPANEL### 
+		<!--###LIST_COL### end -->
+	</tr>
+	<!--###LIST_ROW### end -->
+</table>
+<!--###DEBUGINFO### begin -->
+<hr>
+All available field names:<br>
+###ALLFIELDNAMES###
+<hr>
+<!--###DEBUGINFO### end -->
+<!--###TEMPLATE_DEFAULT### end -->
